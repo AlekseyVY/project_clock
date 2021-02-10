@@ -1,16 +1,25 @@
+import userEvent from "@testing-library/user-event";
+
 const SET_POSITION = 'SET_POSITION';
 
 const pos = {
-  userPosition: null
+  userPosition: {
+    latitude: null,
+    longitude: null
+  }
 }
 
 
-const Position = (state = pos, action) => {
+const positionReducer = (state = pos, action) => {
   switch (action.type) {
     case SET_POSITION: {
       return {
         ...state,
-        userPosition: action.payload
+        userPosition: {
+          ...state,
+          latitude: action.payload.lat,
+          longitude: action.payload.long
+        }
       }
     }
     default: {
@@ -20,12 +29,19 @@ const Position = (state = pos, action) => {
 }
 
 
-export const setPositionAction = (position) => {
+export const setPositionAction = (lat, long) => {
   return {
     type: 'SET_POSITION',
-    payload: position
+    payload: {lat, long}
   }
 }
 
+export const setPositionThunk = () =>{
+  return (dispatch) => {
+    navigator.geolocation.getCurrentPosition((pos) => {
+      dispatch(setPositionAction(pos.coords.latitude, pos.coords.longitude))
+    })
+  }
+}
 
-export default Position;
+export default positionReducer;

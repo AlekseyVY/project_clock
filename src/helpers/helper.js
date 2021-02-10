@@ -8,3 +8,4 @@ export const clockHelper = (number) => {
   }
   return render
 }
+

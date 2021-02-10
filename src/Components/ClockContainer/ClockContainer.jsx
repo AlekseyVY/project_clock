@@ -1,8 +1,16 @@
 import {connect} from "react-redux";
 import {updateTimeThunk} from "../../Redux/time";
 import Clock from "./Clock/Clock";
+import {useEffect} from 'react'
+import {setPositionThunk} from "../../Redux/position";
 
-const ClockContainer = ({hours, minutes, seconds, updateTimeThunk}) => {
+
+const ClockContainer = ({hours, minutes, seconds, lat, long, updateTimeThunk, setPositionThunk}) => {
+
+  console.log(lat, long)
+  useEffect(() => {
+    setPositionThunk()
+  },[])
 
   setInterval(() => {
     updateTimeThunk()
@@ -19,10 +27,13 @@ let mapStateToProps = (state) => {
   return {
     hours: state.time.hours,
     minutes: state.time.minutes,
-    seconds: state.time.seconds
+    seconds: state.time.seconds,
+    lat: state.user.userPosition.latitude,
+    long: state.user.userPosition.longitude
   }
 }
 
 export default connect(mapStateToProps, {
-  updateTimeThunk
+  updateTimeThunk,
+  setPositionThunk
 })(ClockContainer);
