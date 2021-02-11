@@ -5,7 +5,7 @@ import MainWidget from "../MainWidget/MainWidget";
 import ExpandWidgetContainer from "../../ExpandWidget/ExpandWidgetContainer";
 import {useState} from "react";
 
-const Day = ({ citation, author, getRandomQuoteThunk, city, cityCode}) => {
+const Day = ({ citation, author, getRandomQuoteThunk, city, cityCode, time}) => {
   const [toggle, setToggle] = useState(false)
 
   return (
@@ -27,6 +27,7 @@ const Day = ({ citation, author, getRandomQuoteThunk, city, cityCode}) => {
               setToggle={setToggle}
               city={city}
               cityCode={cityCode}
+              time={time}
             />
           </MainWidgetPosition>
             <ExpandWidgetContainer/>
@@ -45,6 +46,7 @@ const Day = ({ citation, author, getRandomQuoteThunk, city, cityCode}) => {
                 setToggle={setToggle}
                 city={city}
                 cityCode={cityCode}
+                time={time}
               />
             </MainWidgetPosition>
           </Container>

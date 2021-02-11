@@ -4,14 +4,18 @@ import {getRandomQuoteThunk} from "../../Redux/quote";
 import {useEffect} from "react";
 import {setPositionThunk} from "../../Redux/user";
 import {setTimeDataThunk} from "../../Redux/time";
+import {timeOfTheDayHelper} from "../../helpers/helper";
+import {useState} from "react";
 
 const MainContainer = ({ citation, author, getRandomQuoteThunk, setPositionThunk, city, cityCode,
-                         setTimeDataThunk}) => {
+                         setTimeDataThunk, hours}) => {
+  const [time, setTime] = useState({})
 
   useEffect(() => {
     getRandomQuoteThunk()
     setPositionThunk()
     setTimeDataThunk()
+    setTime(timeOfTheDayHelper(hours))
   },[])
 
   return (
@@ -22,6 +26,7 @@ const MainContainer = ({ citation, author, getRandomQuoteThunk, setPositionThunk
         author={author}
         city={city}
         cityCode={cityCode}
+        time={time}
       />
     </div>
   )
