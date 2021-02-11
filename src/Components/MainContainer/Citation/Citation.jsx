@@ -52,6 +52,15 @@ const RefreshImage = styled.img`
   margin-left: 16px;
   &:hover {
     cursor: pointer;
+    -webkit-transition-duration: 3s;
+    -moz-transition-duration: 3s;
+    -o-transition-duration: 3s;
+    transition-duration: 3s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    transform: rotate(360deg);
   }
 `;
 
