@@ -22,4 +22,5 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   font-family: 'Inter', sans-serif;;
+  box-sizing: border-box;
 `;

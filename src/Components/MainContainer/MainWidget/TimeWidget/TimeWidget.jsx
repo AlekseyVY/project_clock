@@ -28,8 +28,6 @@ export default TimeWidget;
 const TimeWidgetContainer = styled.div`
   width: 575px;
   height: 288px;
-  margin-left: 165px;
-  margin-bottom: 98px;
 `;
 
 
