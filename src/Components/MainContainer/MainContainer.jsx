@@ -2,11 +2,13 @@ import Main from "./Main";
 import {connect} from "react-redux";
 import {getRandomQuoteThunk} from "../../Redux/quote";
 import {useEffect} from "react";
+import {setPositionThunk} from "../../Redux/user";
 
-const MainContainer = ({ citation, author, getRandomQuoteThunk}) => {
+const MainContainer = ({ citation, author, getRandomQuoteThunk, setPositionThunk, city, cityCode}) => {
 
   useEffect(() => {
     getRandomQuoteThunk()
+    setPositionThunk()
   },[])
 
   return (
@@ -15,6 +17,8 @@ const MainContainer = ({ citation, author, getRandomQuoteThunk}) => {
         getRandomQuoteThunk={getRandomQuoteThunk}
         citation={citation}
         author={author}
+        city={city}
+        cityCode={cityCode}
       />
     </div>
   )
@@ -23,13 +27,16 @@ const MainContainer = ({ citation, author, getRandomQuoteThunk}) => {
 let mapDispatchToProps = (state) => {
   return {
     citation: state.quote.citation,
-    author: state.quote.author
+    author: state.quote.author,
+    city: state.user.userPosition.city,
+    cityCode: state.user.userPosition.countryCode
   }
 }
 
 
 export default connect(mapDispatchToProps, {
-  getRandomQuoteThunk
+  getRandomQuoteThunk,
+  setPositionThunk
 })(MainContainer);
 
 

@@ -2,13 +2,16 @@ import Day from "./Day/Day";
 import styled from "styled-components";
 
 
-const Main = ({citation, author, getRandomQuoteThunk}) => {
+const Main = ({citation, author, getRandomQuoteThunk, city, cityCode}) => {
+
   return(
     <Container>
       <Day
         getRandomQuoteThunk={getRandomQuoteThunk}
         citation={citation}
         author={author}
+        city={city}
+        cityCode={cityCode}
       />
     </Container>
   )

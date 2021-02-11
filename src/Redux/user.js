@@ -1,10 +1,14 @@
+import {getGeoLocation} from "../api/geolocationAPI";
 
 const SET_POSITION = 'SET_POSITION';
+const SET_CITY = 'SET_CITY';
 
 const pos = {
   userPosition: {
     latitude: null,
-    longitude: null
+    longitude: null,
+    city: 'Earth',
+    countryCode: 'Eh'
   }
 }
 
@@ -18,6 +22,16 @@ const positionReducer = (state = pos, action) => {
           ...state,
           latitude: action.payload.lat,
           longitude: action.payload.long
+        }
+      }
+    }
+    case SET_CITY: {
+      return {
+        ...state,
+        userPosition: {
+          ...state,
+          city: action.payload.city,
+          countryCode: action.payload.code
         }
       }
     }
@@ -35,11 +49,21 @@ export const setPositionAction = (lat, long) => {
   }
 }
 
+export const setCityAction = (city, code) => {
+  return {
+    type: 'SET_CITY',
+    payload: {city, code}
+  }
+}
+
 export const setPositionThunk = () =>{
-  return (dispatch) => {
+  return async (dispatch) => {
     navigator.geolocation.getCurrentPosition((pos) => {
       dispatch(setPositionAction(pos.coords.latitude, pos.coords.longitude))
     })
+    let resp = await getGeoLocation()
+    console.log(resp.country_code)
+    dispatch(setCityAction(resp.city, resp.country_code))
   }
 }
 

@@ -3,10 +3,14 @@ import ToggleButton from "../../Common/ToggleButton/ToggleButton";
 import styled from "styled-components";
 
 
-const MainWidget = ({ toggle, setToggle}) => {
+const MainWidget = ({ toggle, setToggle, city, cityCode}) => {
+
   return (
     <MainWidgetContainer>
-      <TimeWidget />
+      <TimeWidget
+        city={city}
+        cityCode={cityCode}
+      />
       <ToggleButtonPos>
         <div/>
         <ToggleButton toggle={toggle} setToggle={setToggle}/>

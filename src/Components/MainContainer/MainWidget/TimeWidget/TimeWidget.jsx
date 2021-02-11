@@ -2,9 +2,9 @@ import ClockContainer from "../../../ClockContainer/ClockContainer";
 import styled from "styled-components";
 import dayIcon from '../../../../resources/desktop/icon-sun.svg'
 
-const TimeWidget = () => {
+const TimeWidget = ({city, cityCode}) => {
+
   const greet = 'GOOD MORNING, IT’S CURRENTLY'
-  const location = 'IN LONDON, UK'
 
   const daytimeIcon = dayIcon
   return(
@@ -15,7 +15,7 @@ const TimeWidget = () => {
       </Greet>
       <ClockContainer />
       <Location>
-        {location}
+        {city}, {cityCode}
       </Location>
     </TimeWidgetContainer>
   )
