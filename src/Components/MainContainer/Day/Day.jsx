@@ -3,20 +3,22 @@ import backgroundImg from '../../../resources/desktop/bg-image-daytime.jpg'
 import Citation from "../Citation/Citation";
 import MainWidget from "../MainWidget/MainWidget";
 import ExpandWidgetContainer from "../../ExpandWidget/ExpandWidgetContainer";
+import {useState} from "react";
 
 const Day = () => {
+  const [toggle, setToggle] = useState(false)
 
-  const moreToggled = false
   return (
     <>
       {
-        moreToggled
-          ? <Container>
+        toggle
+          ?
+          <Container>
             <HideCitation>
               <Citation/>
             </HideCitation>
           <MainWidgetPosition>
-            <MainWidget/>
+            <MainWidget toggle={toggle} setToggle={setToggle}/>
           </MainWidgetPosition>
             <ExpandWidgetContainer />
           </Container>
@@ -25,7 +27,7 @@ const Day = () => {
               <Citation/>
             </CitationPosition>
             <MainWidgetPosition>
-              <MainWidget/>
+              <MainWidget toggle={toggle} setToggle={setToggle}/>
             </MainWidgetPosition>
           </Container>
       }

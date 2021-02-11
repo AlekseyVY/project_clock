@@ -1,12 +1,19 @@
 import styled from "styled-components";
 import arrowIcon from '../../../resources/desktop/icon-arrow-up.svg';
 
-const ToggleButton = () => {
+const ToggleButton = ({toggle, setToggle}) => {
+
+
   return (
     <ToggleContainer>
-      <ToggleText>MORE</ToggleText>
+      <ToggleText>
+        {toggle ? "LESS" : 'MORE'}
+      </ToggleText>
       <ToggleButtonStyle>
-        <img src={arrowIcon} alt={'arrow icon'}/>
+        {toggle
+          ? <ArrowIcon onClick={() => setToggle(!toggle)} src={arrowIcon} alt={'arrow icon'}/>
+          : <ArrowIconActive onClick={() => setToggle(!toggle)} src={arrowIcon} alt={'arrow icon'}/>
+        }
       </ToggleButtonStyle>
     </ToggleContainer>
   )
@@ -39,5 +46,18 @@ const ToggleButtonStyle = styled.div`
   width: 40px;
   height: 40px;
   margin: 8px 9px 8px 0;
+  `;
+
+const ArrowIcon = styled.img`
+  &:hover {
+    cursor: pointer;
+  }
+  `;
+
+
+const ArrowIconActive = styled.img`
   transform: rotate(180deg);
+  &:hover {
+    cursor: pointer;
+  }
   `;
