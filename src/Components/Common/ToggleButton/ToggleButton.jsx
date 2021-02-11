@@ -7,7 +7,7 @@ const ToggleButton = ({toggle, setToggle}) => {
   return (
     <ToggleContainer>
       <ToggleText>
-        {toggle ? "LESS" : 'MORE'}
+        {toggle ? 'LESS' : 'MORE'}
       </ToggleText>
       <ToggleButtonStyle>
         {toggle

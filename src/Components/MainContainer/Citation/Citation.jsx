@@ -3,17 +3,17 @@ import refreshImg from '../../../resources/desktop/icon-refresh.svg';
 
 
 
-const Citation = () => {
+const Citation = ({ citation, author, getRandomQuoteThunk }) => {
   return(
     <CitationContainer>
       <TextContainer>
-        “The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value.”
+        “{citation}”
         <HiddenSeparator/>
         <CitationText>
-          Ada Lovelace
+          {author}
         </CitationText>
       </TextContainer>
-      <RefreshImage src={refreshImg} alt={'refresh button'}/>
+      <RefreshImage onClick={() => getRandomQuoteThunk()} src={refreshImg} alt={'refresh button'}/>
     </CitationContainer>
   )
 }
@@ -50,6 +50,9 @@ const RefreshImage = styled.img`
   color: #FFF;
   margin-top: 10px;
   margin-left: 16px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const CitationText = styled.div`

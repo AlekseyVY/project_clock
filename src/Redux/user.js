@@ -1,4 +1,3 @@
-import userEvent from "@testing-library/user-event";
 
 const SET_POSITION = 'SET_POSITION';
 

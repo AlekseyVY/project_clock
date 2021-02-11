@@ -1,15 +1,35 @@
 import Main from "./Main";
+import {connect} from "react-redux";
+import {getRandomQuoteThunk} from "../../Redux/quote";
+import {useEffect} from "react";
 
-const MainContainer = () => {
+const MainContainer = ({ citation, author, getRandomQuoteThunk}) => {
+
+  useEffect(() => {
+    getRandomQuoteThunk()
+  },[])
+
   return (
     <div>
-      <Main />
+      <Main
+        getRandomQuoteThunk={getRandomQuoteThunk}
+        citation={citation}
+        author={author}
+      />
     </div>
   )
 }
 
+let mapDispatchToProps = (state) => {
+  return {
+    citation: state.quote.citation,
+    author: state.quote.author
+  }
+}
 
 
-export default MainContainer;
+export default connect(mapDispatchToProps, {
+  getRandomQuoteThunk
+})(MainContainer);
 
 

@@ -5,7 +5,7 @@ import MainWidget from "../MainWidget/MainWidget";
 import ExpandWidgetContainer from "../../ExpandWidget/ExpandWidgetContainer";
 import {useState} from "react";
 
-const Day = () => {
+const Day = ({ citation, author, getRandomQuoteThunk }) => {
   const [toggle, setToggle] = useState(false)
 
   return (
@@ -15,7 +15,11 @@ const Day = () => {
           ?
           <Container>
             <HideCitation>
-              <Citation/>
+              <Citation
+                getRandomQuoteThunk={getRandomQuoteThunk}
+                citation={citation}
+                author={author}
+              />
             </HideCitation>
           <MainWidgetPosition>
             <MainWidget toggle={toggle} setToggle={setToggle}/>
@@ -24,7 +28,11 @@ const Day = () => {
           </Container>
           : <Container>
             <CitationPosition>
-              <Citation/>
+              <Citation
+                getRandomQuoteThunk={getRandomQuoteThunk}
+                citation={citation}
+                author={author}
+              />
             </CitationPosition>
             <MainWidgetPosition>
               <MainWidget toggle={toggle} setToggle={setToggle}/>
@@ -42,7 +50,7 @@ export default Day;
 const Container = styled.div`
   width: 1440px;
   height: 800px;
-  background-image: url(${backgroundImg});
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${backgroundImg});
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -2,12 +2,11 @@ import {connect} from "react-redux";
 import {updateTimeThunk} from "../../Redux/time";
 import Clock from "./Clock/Clock";
 import {useEffect} from 'react'
-import {setPositionThunk} from "../../Redux/position";
+import {setPositionThunk} from "../../Redux/user";
 
 
 const ClockContainer = ({hours, minutes, seconds, lat, long, updateTimeThunk, setPositionThunk}) => {
 
-  console.log(lat, long)
   useEffect(() => {
     setPositionThunk()
   },[])
