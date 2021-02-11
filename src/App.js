@@ -1,11 +1,11 @@
-import ClockContainer from "./Components/ClockContainer/ClockContainer";
+import MainContainer from "./Components/MainContainer/MainContainer";
 
 
 function App() {
 
   return (
     <div>
-      <ClockContainer />
+      <MainContainer />
     </div>
   );
 }
