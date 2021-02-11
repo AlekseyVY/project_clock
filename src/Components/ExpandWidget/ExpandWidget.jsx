@@ -1,12 +1,8 @@
 import styled from "styled-components";
 
 
-const ExpandWidget = () => {
+const ExpandWidget = ({timeZone, dayOfTheYear, dayOfTheWeek, weekNumber}) => {
 
-  const timeZone = 'Europe/London'
-  const dayOfTheYear = 295
-  const dayOfWeek = 5
-  const weekNumber = 42
   return (
     <ExpandWidgetContainer>
       <WidgetContainer>
@@ -34,7 +30,7 @@ const ExpandWidget = () => {
               Day of the week
             </DayOfWeekLogo>
             <DayOfWeekData>
-              {dayOfWeek}
+              {dayOfTheWeek}
             </DayOfWeekData>
           </DayOfWeekContainer>
           <WeekNumberContainer>

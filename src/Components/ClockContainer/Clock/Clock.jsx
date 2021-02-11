@@ -2,7 +2,7 @@ import {clockHelper} from "../../../helpers/helper";
 import styled from "styled-components";
 
 
-const Clock = ({ hours, minutes, seconds}) => {
+const Clock = ({ hours, minutes}) => {
 
   const timeLoc = 'BST'
   return (

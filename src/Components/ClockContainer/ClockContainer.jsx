@@ -5,7 +5,7 @@ import {useEffect} from 'react'
 import {setPositionThunk} from "../../Redux/user";
 
 
-const ClockContainer = ({hours, minutes, seconds, updateTimeThunk}) => {
+const ClockContainer = ({hours, minutes, updateTimeThunk}) => {
 
 
   setInterval(() => {
@@ -14,7 +14,7 @@ const ClockContainer = ({hours, minutes, seconds, updateTimeThunk}) => {
 
   return (
     <div>
-      <Clock hours={hours} minutes={minutes} seconds={seconds}/>
+      <Clock hours={hours} minutes={minutes}/>
     </div>
   )
 }
@@ -23,7 +23,6 @@ let mapStateToProps = (state) => {
   return {
     hours: state.time.hours,
     minutes: state.time.minutes,
-    seconds: state.time.seconds,
     lat: state.user.userPosition.latitude,
     long: state.user.userPosition.longitude
   }

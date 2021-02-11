@@ -9,3 +9,6 @@ export const clockHelper = (number) => {
   return render
 }
 
+export const timeOfTheDayHelper = (hour) => {
+
+}

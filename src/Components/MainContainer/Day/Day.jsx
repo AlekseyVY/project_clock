@@ -29,7 +29,7 @@ const Day = ({ citation, author, getRandomQuoteThunk, city, cityCode}) => {
               cityCode={cityCode}
             />
           </MainWidgetPosition>
-            <ExpandWidgetContainer />
+            <ExpandWidgetContainer/>
           </Container>
           : <Container>
             <CitationPosition>

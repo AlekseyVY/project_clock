@@ -62,7 +62,6 @@ export const setPositionThunk = () =>{
       dispatch(setPositionAction(pos.coords.latitude, pos.coords.longitude))
     })
     let resp = await getGeoLocation()
-    console.log(resp.country_code)
     dispatch(setCityAction(resp.city, resp.country_code))
   }
 }
