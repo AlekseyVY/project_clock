@@ -23,33 +23,33 @@ export default Citation
 
 
 const CitationContainer = styled.div`
-  width: 573px;
-  height: 125px;
+  width: 57.3rem;
+  height: 12.5rem;
   display: flex;
   color: #FFFFFF;
   
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
   text-align: left;
 `;
 
 const TextContainer = styled.div`
-  width: 540px;
-  height: 84px;
+  width: 54rem;
+  height: 8.4rem;
 `;
 
 const HiddenSeparator = styled.div`
-  height: 13px;
+  height: 1.3rem;
   padding: 0;
   margin: 0;
 `;
 
 const RefreshImage = styled.img`
-  width: 17px;
-  height: 17px;
+  width: 1.7rem;
+  height: 1.7rem;
   color: #FFF;
-  margin-top: 10px;
-  margin-left: 16px;
+  margin-top: 1rem;
+  margin-left: 1.6rem;
   &:hover {
     cursor: pointer;
     -webkit-transition-duration: 3s;

@@ -53,33 +53,33 @@ export default ExpandWidget;
 
 const ExpandWidgetContainer = styled.div`
   width: 100%;
-  height: 400px;
+  height: 40rem;
   background-color: #979797;
   `;
 
 
 const WidgetContainer = styled.div`
-  width: 844px;
-  height: 252px;
-  margin-top: 74px;
-  margin-left: 165px;
+  width: 84.4rem;
+  height: 25.2rem;
+  margin-top: 7.4rem;
+  margin-left: 16.5rem;
   display: flex;
   `;
 
 const CurrentTimezoneContainer = styled.div`
-  height: 105px;
-  width: 423px;
-  margin-bottom: 42px;
+  height: 10.5rem;
+  width: 42.3rem;
+  margin-bottom: 4.2rem;
   `;
 
 const CurrentTimezoneLogo = styled.div`
-  font-size: 15px;
-  letter-spacing: 3px;
-  margin-bottom: 9px;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 0.9rem;
   `;
 
 const CurrentTimezoneData = styled.div`
-  font-size: 56px;
+  font-size: 5.6rem;
   letter-spacing: 0;
   font-weight: bold;
   color: #303030;
@@ -87,24 +87,24 @@ const CurrentTimezoneData = styled.div`
 
 const LeftSideData = styled.div`
   display: flex;
-  width: 570px;
+  width: 57rem;
   flex-direction: column;
-  border-right: 2px solid #303030;
+  border-right: 0.2rem solid #303030;
   `;
 
 const DayOfTheYearContainer = styled.div`
-  width: 176px;
-  height: 105px
+  width: 17.6rem;
+  height: 10.5rem
   `;
 
 const DayOfTheYearLogo = styled.div`
-  font-size: 15px;
-  letter-spacing: 3px;
-  line-height: 28px;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+  line-height: 2.8rem;
   `;
 
 const DayOfTheYearData = styled.div`
-  font-size: 56px;
+  font-size: 5.6rem;
   font-weight: bold;
   color: #303030;
   `;
@@ -113,7 +113,7 @@ const DayOfTheYearData = styled.div`
 const RightSideData = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 94px;
+  margin-left: 9.4rem;
   `;
 
 
@@ -124,13 +124,13 @@ const DayOfWeekContainer = styled.div`
   `;
 
 const DayOfWeekLogo = styled.div`
-  font-size: 15px;
-  letter-spacing: 3px;
-  line-height: 28px;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+  line-height: 2.8rem;
   `;
 
 const DayOfWeekData = styled.div`
-  font-size: 56px;
+  font-size: 5.6rem;
   font-weight: bold;
   `;
 
@@ -140,12 +140,12 @@ const WeekNumberContainer = styled.div`
   `;
 
 const WeekNumberLogo = styled.div`
-  font-size: 15px;
-  letter-spacing: 3px;
-  line-height: 28px;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+  line-height: 2.8rem;
   `;
 
 const WeekNumberData = styled.div`
-  font-size: 56px;
+  font-size: 5.6rem;
   font-weight: bold;
   `;

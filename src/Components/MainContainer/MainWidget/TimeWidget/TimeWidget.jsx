@@ -23,15 +23,15 @@ export default TimeWidget;
 
 
 const TimeWidgetContainer = styled.div`
-  width: 575px;
-  height: 288px;
+  width: 57.5rem;
+  height: 28.8rem;
 `;
 
 
 const Greet = styled.div`
-  font-size: 20px;
-  letter-spacing: 4px;
-  line-height: 28px;
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+  line-height: 2.8rem;
   color: #FFF;
   display: flex;
   align-items: center;
@@ -39,17 +39,17 @@ const Greet = styled.div`
 `;
 
 const TimeIcon = styled.img`
-  width: 24px;
-  height: 24px;
-  margin-right: 16px;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 1.6rem;
 `;
 
 
 const Location = styled.div`
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: bold;
-  letter-spacing: 4.8px;
-  line-height: 28px;
+  letter-spacing: 0.48rem;
+  line-height: 2.8rem;
   color: #FFF;
-  margin-top: 16px;
+  margin-top: 1.6rem;
   `;

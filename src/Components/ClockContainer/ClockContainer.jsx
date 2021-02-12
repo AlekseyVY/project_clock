@@ -1,8 +1,6 @@
 import {connect} from "react-redux";
 import {updateTimeThunk} from "../../Redux/time";
 import Clock from "./Clock/Clock";
-import {useEffect} from 'react'
-import {setPositionThunk} from "../../Redux/user";
 
 
 const ClockContainer = ({hours, minutes, updateTimeThunk}) => {

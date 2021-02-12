@@ -36,18 +36,18 @@ const ShortTimePos = styled.div`
 `;
 
 const ShortTime = styled.div`
-  margin-left: 11px;
-  font-size: 40px;
+  margin-left: 1.1rem;
+  font-size: 4rem;
   font-weight: lighter;
   color: #FFF;
-  line-height: 70px;
+  line-height: 7rem;
 `;
 
 
 const ClockStyle = styled.div`
-  font-size: 200px;
+  font-size: 20rem;
   font-weight: bold;
   color: #FFF;
-  letter-spacing: -5px;
-  line-height: 200px;
+  letter-spacing: -0.5rem;
+  line-height: 20rem;
   `;

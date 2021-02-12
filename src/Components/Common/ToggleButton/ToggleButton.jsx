@@ -23,29 +23,29 @@ const ToggleButton = ({toggle, setToggle}) => {
 export default ToggleButton;
 
 const ToggleContainer = styled.div`
-  width: 146px;
-  height: 56px;
+  width: 14.6rem;
+  height: 5.6rem;
   background-color: #FFF;
-  border-radius: 28px;
-  margin-bottom: 98px;
-  margin-right: 165px;
+  border-radius: 2.8rem;
+  margin-bottom: 9.8rem;
+  margin-right: 16.5rem;
   display: flex;
   `;
 
 const ToggleText = styled.div`
-  font-size: 16px;
-  letter-spacing: 5px;
-  line-height: 28px;
+  font-size: 1.6rem;
+  letter-spacing: 0.5rem;
+  line-height: 2.8rem;
   color: #000000;
-  width: 63px;
-  height: 28px;
-  margin: 15px 13px 16px 21px;
+  width: 6.3rem;
+  height: 2.8rem;
+  margin: 1.5rem 1.3rem 1.6rem 2.1rem;
   `;
 
 const ToggleButtonStyle = styled.div`
-  width: 40px;
-  height: 40px;
-  margin: 8px 9px 8px 0;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.8rem 0.9rem 0.8rem 0;
   `;
 
 const ArrowIcon = styled.img`
