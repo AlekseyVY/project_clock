@@ -6,7 +6,6 @@ import styled from "styled-components";
 const ExpandWidget = ({timeZone, dayOfTheYear, dayOfTheWeek, weekNumber, time}) => {
   let bgColor = '#979797'
   let textColor = '#303030'
-  console.log(time)
 
   if(!time){
     bgColor = '#000'
