@@ -3,6 +3,8 @@ import dayBg from '../../../resources/desktop/bg-image-daytime.jpg'
 import nightBg from '../../../resources/desktop/bg-image-nighttime.jpg'
 import dayBgTab from '../../../resources/tablet/bg-image-daytime.jpg'
 import nightBgTab from '../../../resources/tablet/bg-image-nighttime.jpg'
+import dayBgMob from '../../../resources/mobile/bg-image-daytime.jpg'
+import nightBgMob from '../../../resources/mobile/bg-image-nighttime.jpg'
 import Citation from "../Citation/Citation";
 import MainWidget from "../MainWidget/MainWidget";
 import ExpandWidgetContainer from "../../ExpandWidget/ExpandWidgetContainer";
@@ -21,6 +23,10 @@ const Day = ({ citation, author, getRandomQuoteThunk, city, cityCode, time}) => 
     @media (max-width: 768px) {
       height: 102.4rem;
       background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${time.isDay ? dayBgTab : nightBgTab});
+    }
+    @media (max-width: 375px) {
+      height: 66.7rem;
+      background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${time.isDay ? dayBgMob : nightBgMob}) no-repeat;
     }
 `;
 
@@ -98,5 +104,8 @@ const MainWidgetPosition = styled.div`
   margin-left: 16.5rem;
   @media (max-width: 769px) {
     margin: auto;
+  }
+  @media (max-width: 375px) {
+    margin-top: 3rem;
   }
   `;

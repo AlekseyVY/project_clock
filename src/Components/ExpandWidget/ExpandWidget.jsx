@@ -25,6 +25,12 @@ const ExpandWidget = ({timeZone, dayOfTheYear, dayOfTheWeek, weekNumber, time}) 
 
   const WeekNumberContainer = styled.div`
   color: ${textColor};
+    @media (max-width: 375px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 3rem;
+    }
   `;
 
   const CurrentTimezoneData = styled.div`
@@ -35,6 +41,10 @@ const ExpandWidget = ({timeZone, dayOfTheYear, dayOfTheWeek, weekNumber, time}) 
     @media (max-width: 769px) {
       font-size: 4rem;
     }
+    @media (max-width: 375px) {
+      font-size: 2rem;
+      margin-right: 2.6rem;
+    }
   `;
 
   const DayOfTheYearData = styled.div`
@@ -44,17 +54,32 @@ const ExpandWidget = ({timeZone, dayOfTheYear, dayOfTheWeek, weekNumber, time}) 
     @media (max-width: 769px) {
       font-size: 4rem;
     }
+    @media (max-width: 375px) {
+      font-size: 2rem;
+      margin-right: 2.6rem;
+    }
   `;
   const WeekNumberLogo = styled.div`
     font-size: 1.5rem;
     letter-spacing: 0.3rem;
     line-height: 2.8rem;
     color: ${textColor};
+    @media (max-width: 375px) {
+      font-size: 1rem;
+      letter-spacing: 0.2rem;
+      margin-left: 2.6rem;
+    }
   `;
 
   const DayOfWeekContainer = styled.div`
   width: 100%;
   color: ${textColor};
+    @media (max-width: 375px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 3rem;
+    }
   `;
 
 
@@ -68,6 +93,12 @@ const ExpandWidget = ({timeZone, dayOfTheYear, dayOfTheWeek, weekNumber, time}) 
     @media (max-width: 769px) {
       width: 100%;
       margin: 1rem 0.5rem 0;
+    }
+    @media (max-width: 375px) {
+      width: 37.5rem;
+      height: 25.6rem;
+      margin: 0;
+      flex-direction: column;
     }
   `;
 
@@ -131,12 +162,25 @@ const CurrentTimezoneContainer = styled.div`
     width: 100%;
     margin: 0;
   }
-  `;
+  @media (max-width: 375px) {
+    margin: 3rem 0 0;
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+`;
 
 const CurrentTimezoneLogo = styled.div`
   font-size: 1.5rem;
   letter-spacing: 0.3rem;
   margin-bottom: 0.9rem;
+  @media (max-width: 375px) {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    margin-left: 2.6rem;
+    margin-bottom: 0;
+  }
   `;
 
 
@@ -147,8 +191,11 @@ const LeftSideData = styled.div`
   flex-direction: column;
   border-right: 0.2rem solid #303030;
   @media (max-width: 769px) {
-    width: 70%;
     border: none;
+    width: auto;
+  }
+  @media (max-width: 375px) {
+    font-size: 2rem;
   }
   `;
 
@@ -157,13 +204,25 @@ const DayOfTheYearContainer = styled.div`
   height: 10.5rem;
   @media (max-width: 769px) {
     width: 100%;
+    height: auto;
 }
+  @media (max-width: 375px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+  }
   `;
 
 const DayOfTheYearLogo = styled.div`
   font-size: 1.5rem;
   letter-spacing: 0.3rem;
   line-height: 2.8rem;
+  @media (max-width: 375px) {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    margin-left: 2.6rem;
+  }
   `;
 
 
@@ -176,6 +235,9 @@ const RightSideData = styled.div`
   @media (max-width: 769px) {
     margin: 0;
   }
+  @media (max-width: 375px) {
+    font-size: 2rem;
+  }
   `;
 
 
@@ -185,6 +247,11 @@ const DayOfWeekLogo = styled.div`
   font-size: 1.5rem;
   letter-spacing: 0.3rem;
   line-height: 2.8rem;
+  @media (max-width: 375px) {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    margin-left: 2.6rem;
+  }
   `;
 
 const DayOfWeekData = styled.div`
@@ -192,6 +259,10 @@ const DayOfWeekData = styled.div`
   font-weight: bold;
   @media (max-width: 769px) {
     font-size: 4rem;
+  }
+  @media (max-width: 375px) {
+    font-size: 2rem;
+    margin-right: 2.6rem;
   }
   `;
 
@@ -205,5 +276,9 @@ const WeekNumberData = styled.div`
   font-weight: bold;
   @media (max-width: 769px) {
     font-size: 4rem;
+  }
+  @media (max-width: 375px) {
+    font-size: 2rem;
+    margin-right: 2.6rem;
   }
   `;

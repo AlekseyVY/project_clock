@@ -29,7 +29,11 @@ const CitationContainer = styled.div`
   font-size: 1.8rem;
   line-height: 2.8rem;
   text-align: left;
-  
+  @media (max-width: 375px) {
+    width: 32.4rem;
+    height: 9.7rem;
+    font-size: 1.2rem;
+  }
 `;
 
 const TextContainer = styled.div`
