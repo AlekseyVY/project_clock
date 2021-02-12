@@ -1,11 +1,11 @@
 # The Clock Project
 
-##This is Clock app that works with described below API, shows time and citations.
+## This is Clock app that works with described below API, shows time and citations.
 - [World Time API](http://worldtimeapi.org/) to set the time based on the visitor's IP adress. This API will also be used for additional data, like the day of the year shown in the expanded state.
 - [IP Geolocation API](https://freegeoip.app/) to set the city and country underneath the time
 - [Programming Quotes API](https://github.com/lukePeavey/quotable) to generate random programming quotes.
 
-##Your users should be able to:
+## Your users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 - View the current time and location information based on their IP address
@@ -23,4 +23,4 @@
   - The moon icon and the nighttime background image between 6pm and 5am
 - Generate a new random programming quote whenever the refresh icon is clicked
 
-###coded by Aleksey Vasiliev. -> [Join me on my social](https://vk.com/alekseyvy) <-
+### coded by Aleksey Vasiliev. -> [Join me on my social](https://vk.com/alekseyvy) <-
