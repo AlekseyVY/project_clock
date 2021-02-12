@@ -25,6 +25,10 @@ export default TimeWidget;
 const TimeWidgetContainer = styled.div`
   width: 57.5rem;
   height: 28.8rem;
+  @media (max-width: 769px) {
+    width: auto;
+    height: auto;
+  }
 `;
 
 
@@ -35,7 +39,11 @@ const Greet = styled.div`
   color: #FFF;
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+  @media (max-width: 769px) {
+    font-size: 1.8rem;
+    letter-spacing: 0.36rem;
+  }
 `;
 
 const TimeIcon = styled.img`
@@ -52,4 +60,8 @@ const Location = styled.div`
   line-height: 2.8rem;
   color: #FFF;
   margin-top: 1.6rem;
+  @media (max-width: 769px) {
+    letter-spacing: 0.36rem;
+    font-size: 1.8rem;
+  }
   `;

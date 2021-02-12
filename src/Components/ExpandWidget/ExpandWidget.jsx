@@ -1,7 +1,75 @@
 import styled from "styled-components";
 
 
-const ExpandWidget = ({timeZone, dayOfTheYear, dayOfTheWeek, weekNumber}) => {
+
+
+const ExpandWidget = ({timeZone, dayOfTheYear, dayOfTheWeek, weekNumber, time}) => {
+  let bgColor = '#979797'
+  let textColor = '#303030'
+  console.log(time)
+
+  if(!time){
+    bgColor = '#000'
+    textColor = '#FFF'
+  }
+
+  const ExpandWidgetContainer = styled.div`
+  width: 100%;
+  height: 40rem;
+  background-color: ${bgColor};
+  opacity: 75%;
+    @media (max-width: 769px) {
+      height: 44rem;
+    }
+  `;
+
+  const WeekNumberContainer = styled.div`
+  color: ${textColor};
+  `;
+
+  const CurrentTimezoneData = styled.div`
+  font-size: 5.6rem;
+  letter-spacing: 0;
+  font-weight: bold;
+  color: ${textColor};
+    @media (max-width: 769px) {
+      font-size: 4rem;
+    }
+  `;
+
+  const DayOfTheYearData = styled.div`
+  font-size: 5.6rem;
+  font-weight: bold;
+  color: ${textColor};
+    @media (max-width: 769px) {
+      font-size: 4rem;
+    }
+  `;
+  const WeekNumberLogo = styled.div`
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    line-height: 2.8rem;
+    color: ${textColor};
+  `;
+
+  const DayOfWeekContainer = styled.div`
+  width: 100%;
+  color: ${textColor};
+  `;
+
+
+  const WidgetContainer = styled.div`
+    width: 84.4rem;
+    height: 25.2rem;
+    margin-top: 7.4rem;
+    margin-left: 16.5rem;
+    display: flex;
+    color: ${textColor};
+    @media (max-width: 769px) {
+      width: 100%;
+      margin: 1rem 0.5rem 0;
+    }
+  `;
 
   return (
     <ExpandWidgetContainer>
@@ -51,25 +119,18 @@ const ExpandWidget = ({timeZone, dayOfTheYear, dayOfTheWeek, weekNumber}) => {
 export default ExpandWidget;
 
 
-const ExpandWidgetContainer = styled.div`
-  width: 100%;
-  height: 40rem;
-  background-color: #979797;
-  `;
 
 
-const WidgetContainer = styled.div`
-  width: 84.4rem;
-  height: 25.2rem;
-  margin-top: 7.4rem;
-  margin-left: 16.5rem;
-  display: flex;
-  `;
+
 
 const CurrentTimezoneContainer = styled.div`
   height: 10.5rem;
   width: 42.3rem;
   margin-bottom: 4.2rem;
+  @media (max-width: 769px) {
+    width: 100%;
+    margin: 0;
+  }
   `;
 
 const CurrentTimezoneLogo = styled.div`
@@ -78,23 +139,25 @@ const CurrentTimezoneLogo = styled.div`
   margin-bottom: 0.9rem;
   `;
 
-const CurrentTimezoneData = styled.div`
-  font-size: 5.6rem;
-  letter-spacing: 0;
-  font-weight: bold;
-  color: #303030;
-  `;
+
 
 const LeftSideData = styled.div`
   display: flex;
   width: 57rem;
   flex-direction: column;
   border-right: 0.2rem solid #303030;
+  @media (max-width: 769px) {
+    width: 70%;
+    border: none;
+  }
   `;
 
 const DayOfTheYearContainer = styled.div`
   width: 17.6rem;
-  height: 10.5rem
+  height: 10.5rem;
+  @media (max-width: 769px) {
+    width: 100%;
+}
   `;
 
 const DayOfTheYearLogo = styled.div`
@@ -103,25 +166,20 @@ const DayOfTheYearLogo = styled.div`
   line-height: 2.8rem;
   `;
 
-const DayOfTheYearData = styled.div`
-  font-size: 5.6rem;
-  font-weight: bold;
-  color: #303030;
-  `;
+
 
 
 const RightSideData = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 9.4rem;
+  @media (max-width: 769px) {
+    margin: 0;
+  }
   `;
 
 
-const DayOfWeekContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  color: #303030;
-  `;
+
 
 const DayOfWeekLogo = styled.div`
   font-size: 1.5rem;
@@ -132,20 +190,20 @@ const DayOfWeekLogo = styled.div`
 const DayOfWeekData = styled.div`
   font-size: 5.6rem;
   font-weight: bold;
+  @media (max-width: 769px) {
+    font-size: 4rem;
+  }
   `;
 
 
-const WeekNumberContainer = styled.div`
-  color: #303030;
-  `;
 
-const WeekNumberLogo = styled.div`
-  font-size: 1.5rem;
-  letter-spacing: 0.3rem;
-  line-height: 2.8rem;
-  `;
+
+
 
 const WeekNumberData = styled.div`
   font-size: 5.6rem;
   font-weight: bold;
+  @media (max-width: 769px) {
+    font-size: 4rem;
+  }
   `;

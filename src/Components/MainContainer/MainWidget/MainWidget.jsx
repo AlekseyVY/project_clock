@@ -13,7 +13,7 @@ const MainWidget = ({ toggle, setToggle, city, cityCode, time}) => {
         time={time}
       />
       <ToggleButtonPos>
-        <div/>
+        <Hide/>
         <ToggleButton toggle={toggle} setToggle={setToggle}/>
       </ToggleButtonPos>
     </MainWidgetContainer>
@@ -23,10 +23,18 @@ const MainWidget = ({ toggle, setToggle, city, cityCode, time}) => {
 
 export default MainWidget;
 
+const Hide = styled.div`
+  @media (max-width: 769px) {
+    display: none;
+  }
+`;
 
 const MainWidgetContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  @media (max-width: 769px) {
+    flex-direction: column;
+  }
   `;
 
 
@@ -34,4 +42,7 @@ const ToggleButtonPos = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 769px) {
+    margin-top: 5rem;
+  }
   `;

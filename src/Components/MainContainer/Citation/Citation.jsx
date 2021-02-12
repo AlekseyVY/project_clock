@@ -23,18 +23,17 @@ export default Citation
 
 
 const CitationContainer = styled.div`
-  width: 57.3rem;
   height: 12.5rem;
   display: flex;
   color: #FFFFFF;
-  
   font-size: 1.8rem;
   line-height: 2.8rem;
   text-align: left;
+  
 `;
 
 const TextContainer = styled.div`
-  width: 54rem;
+  max-width: 54rem;
   height: 8.4rem;
 `;
 

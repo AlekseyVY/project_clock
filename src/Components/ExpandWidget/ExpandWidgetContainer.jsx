@@ -2,7 +2,7 @@ import ExpandWidget from "./ExpandWidget";
 import {connect} from "react-redux";
 
 
-const ExpandWidgetContainer = ({timeZone, dayOfTheYear, dayOfTheWeek, weekNumber}) => {
+const ExpandWidgetContainer = ({timeZone, dayOfTheYear, dayOfTheWeek, weekNumber, time}) => {
 
   return(
     <>
@@ -11,6 +11,7 @@ const ExpandWidgetContainer = ({timeZone, dayOfTheYear, dayOfTheWeek, weekNumber
         dayOfTheYear={dayOfTheYear}
         dayOfTheWeek={dayOfTheWeek}
         weekNumber={weekNumber}
+        time={time}
       />
     </>
   )

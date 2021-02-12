@@ -41,6 +41,9 @@ const ShortTime = styled.div`
   font-weight: lighter;
   color: #FFF;
   line-height: 7rem;
+  @media (max-width: 769px) {
+    font-size: 3.2rem;
+  }
 `;
 
 
@@ -50,4 +53,9 @@ const ClockStyle = styled.div`
   color: #FFF;
   letter-spacing: -0.5rem;
   line-height: 20rem;
+  @media (max-width: 769px) {
+    font-size: 17.5rem;
+    letter-spacing: -0.438rem;
+    line-height: 17.5rem;
+  }
   `;
