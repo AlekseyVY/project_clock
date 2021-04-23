@@ -24,4 +24,4 @@
   - The moon icon and the nighttime background image between 6pm and 5am
 - Generate a new random programming quote whenever the refresh icon is clicked
 
-### coded by Aleksey Vasiliev. -> [Join me on my social](https://vk.com/alekseyvy) <-
+### coded by Aleksey Vasiliev. -> [Join me on my social](https://vk.com/alekseyvy) <
